@@ -1,4 +1,4 @@
-#[ToDo List](https://eugene-gif.github.io/ToDoServe/) - список задач.
+# [ToDo List](https://eugene-gif.github.io/ToDoServe/) - список задач.
 
 ### Требования к проекту:
 1. Получать данные с сервера, отрисовывать их на странице
