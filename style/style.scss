@@ -1,0 +1,155 @@
+$green: #009688;
+$focus: #22226f;
+$hover-bg: #3f51b5;
+
+.page {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.body {
+  font-size: 1.6rem;
+  background-color: lightblue;
+}
+
+.container {
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background-color: $green;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+
+  &__title {
+    font-size: 4.8rem;
+  }
+
+  margin-bottom: 40px;
+}
+
+.form {
+
+  margin: 0 auto 50px auto;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  &__input,
+  &__select {
+    padding: 10px;
+    width: 100%;
+    font-size: inherit;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: none;
+  }
+
+  &__btn {
+    padding: 15px 40px;
+    align-self: center;
+    font-size: 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: $green;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $hover-bg;
+    }
+  }
+
+  &__input:focus,
+  &__select:focus,
+  &__btn:focus {
+    outline: none;
+    outline: 2px solid #22226f;
+  }
+}
+
+.list {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+
+  &__item {
+    padding: 10px;
+    font-size: 1.8rem;
+  }
+
+  &__item-text {
+
+    i,
+    b {
+      color: $hover-bg;
+    }
+  }
+  &__item-text.active {
+    text-decoration: line-through;
+  }
+
+  &__item-label {
+    margin-right: 10px;
+    cursor: pointer;
+    &-check {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      padding-left: 20px;
+    }
+
+    &-span {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #0ea36e;
+      margin-left: -20px;
+      margin-top: 8px;
+    }
+
+    &-check:checked+&-span::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background-color: #0ea36e;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__item-label-check:checked ~ .list__item-text {
+    color: red;
+  }
+
+  &__item-close {
+    margin-left: 10px;
+    vertical-align: middle;
+    font-size: 3rem;
+    font-weight: 700;
+    color: orangered;
+    cursor: pointer;
+    padding: 5px;
+
+    &:hover {
+      color: red;
+    }
+  }
+}

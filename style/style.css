@@ -1,0 +1,130 @@
+.page {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.body {
+  font-size: 1.6rem;
+  background-color: lightblue;
+}
+
+.container {
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background-color: #009688;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.header__title {
+  font-size: 4.8rem;
+}
+
+.form {
+  margin: 0 auto 50px auto;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.form__input, .form__select {
+  padding: 10px;
+  width: 100%;
+  font-size: inherit;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: none;
+}
+.form__btn {
+  padding: 15px 40px;
+  align-self: center;
+  font-size: 2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #009688;
+  color: white;
+  cursor: pointer;
+}
+.form__btn:hover {
+  background-color: #3f51b5;
+}
+.form__input:focus, .form__select:focus, .form__btn:focus {
+  outline: none;
+  outline: 2px solid #22226f;
+}
+
+.list {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.list__item {
+  padding: 10px;
+  font-size: 1.8rem;
+}
+.list__item-text i,
+.list__item-text b {
+  color: #3f51b5;
+}
+.list__item-text.active {
+  text-decoration: line-through;
+}
+.list__item-label {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.list__item-label-check {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  padding-left: 20px;
+}
+.list__item-label-span {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #0ea36e;
+  margin-left: -20px;
+  margin-top: 8px;
+}
+.list__item-label-check:checked + .list__item-label-span::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #0ea36e;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.list__item-label-check:checked ~ .list__item-text {
+  color: red;
+}
+.list__item-close {
+  margin-left: 10px;
+  vertical-align: middle;
+  font-size: 3rem;
+  font-weight: 700;
+  color: orangered;
+  cursor: pointer;
+  padding: 5px;
+}
+.list__item-close:hover {
+  color: red;
+}/*# sourceMappingURL=style.css.map */
